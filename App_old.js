@@ -1,47 +1,19 @@
-// import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Animated, Image,ScrollView,SafeAreaView } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View, TouchableHighlight, Linking, Image,ScrollView,SafeAreaView } from 'react-native';
 import { WebView } from 'react-native-webview';
-
+import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import 'react-native-gesture-handler';
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
-// import Constants from 'expo-constants';
-// import { Card } from 'react-native-paper';, useEffect 
+import Constants from 'expo-constants';
+// import { Card } from 'react-native-paper';
 import { Dimensions } from 'react-native';
-import React, { useRef} from 'react';
 
 
 const Stack = createStackNavigator();
 const win = Dimensions.get('window');
 const ratio = win.width / 434;
-const FadeInView = (props) => {
-  const fadeAnim = useRef(new Animated.Value(0)).current  // Initial value for opacity: 0
-
-  React.useEffect(() => {
-    Animated.timing(
-      fadeAnim,
-      {
-        toValue: 1,
-        duration: 800,
-        useNativeDriver: true,
-        delay:props.ritardo
-      }
-    ).start();
-  }, [fadeAnim])
-
-  return (
-    <Animated.View                 // Special animatable View
-      style={{
-        ...props.style,
-        opacity: fadeAnim,         // Bind opacity to animated value
-      }}
-    >
-      {props.children}
-    </Animated.View>
-  );
-}
-
 
 function ScreenA({navigation}){ //pagina iniziale
   const screenb= () => {
@@ -61,7 +33,7 @@ function ScreenA({navigation}){ //pagina iniziale
       <ScrollView>
 
         <View style={styles.container}> 
-          <FadeInView  style={styles.div} ritardo={400}>
+          <View style={styles.div}>
             <TouchableWithoutFeedback onPress={screenb}>
               <Image source={require('./assets/entra.jpg')}  
               style={{
@@ -69,10 +41,9 @@ function ScreenA({navigation}){ //pagina iniziale
                 height: 217 * ratio,
               }}/>
           </TouchableWithoutFeedback>
-          <Text style={styles.text}>Prova la nostra app</Text>
-        </FadeInView>
-        
-        <FadeInView style={styles.div}  ritardo={800}>
+        </View>
+        <Text style={styles.text}>Prova la nostra app</Text>
+        <View style={styles.div}>
           <TouchableWithoutFeedback onPress={screenc}>
             <Image source={require('./assets/rider.jpg')}  
             style={{
@@ -81,10 +52,10 @@ function ScreenA({navigation}){ //pagina iniziale
             }}
             />
           </TouchableWithoutFeedback> 
-          <Text style={styles.text}>Area Driver</Text>
-        </FadeInView>
-        
-        <FadeInView style={styles.div} ritardo={1200}>
+          
+        </View>
+        <Text style={styles.text}>Area Driver</Text>
+        <View style={styles.div}>
           <TouchableWithoutFeedback onPress={screend}>
             <Image source={require('./assets/gestori.jpg')} 
             style={{
@@ -93,10 +64,10 @@ function ScreenA({navigation}){ //pagina iniziale
             }}
             />
           </TouchableWithoutFeedback> 
-        <Text style={styles.text}>Area Gestori</Text>
-        </FadeInView>
         
-          {/* <StatusBar style="auto" /> */}
+        </View>
+        <Text style={styles.text}>Area Gestori</Text>
+          <StatusBar style="auto" />
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -167,18 +138,12 @@ const styles = StyleSheet.create({
     fontFamily:'serif',
     fontSize:20
   },
-  // text1:{
-  //   textAlign:'center',
-  //   color:'#17a2b8',
-  //   fontSize:20,
-  //   fontFamily:'serif'
-  // },
-  // fadingContainer: {
-  //   padding: 20,
-  //   backgroundColor: 'powderblue',
-  // },
-  // fadingText: {
-  //   fontSize: 28,
-  // },
+  text1:{
+    textAlign:'center',
+    color:'#17a2b8',
+    fontSize:20,
+    fontFamily:'serif'
+  }
 
 });
+

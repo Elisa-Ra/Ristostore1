@@ -6,7 +6,7 @@
     "orientation": "portrait",
     "icon": "./assets/simbolo.png",
     "splash": {
-      "image": "./assets/simbolo.png",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -30,7 +30,7 @@
     "web": {
       "favicon": "./assets/simbolo.png"
     },
-    "description": "versione con scrollview",
+    "description": "versione con 1 solo componente fadein",
     "githubUrl": "https://github.com/Elisa-Ra/Ristostore"
   }
 }
