@@ -2,7 +2,7 @@
   "expo": {
     "name": "ristostore",
     "slug": "ristostore",
-    "version": "41.0.0",
+    "version": "41.0.5",
     "orientation": "portrait",
     "icon": "./assets/simbolo.png",
     "splash": {
@@ -18,19 +18,27 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.elyraptor.ristostore"
+      "bundleIdentifier": "Ristostore",
+      "buildNumber": "41.0.5"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.elyraptor.ristostore"
+      "package": "com.app.ristostoreh",
+      "versionCode": 4105,
+      "permissions": []
     },
     "web": {
       "favicon": "./assets/simbolo.png"
     },
     "description": "versione con 1 solo componente fadein",
-    "githubUrl": "https://github.com/Elisa-Ra/Ristostore"
+    "githubUrl": "https://github.com/Elisa-Ra/Ristostore",
+    "extra": {
+      "eas": {
+        "projectId": "9346a4b1-0757-45e6-9887-ee8558fbc9f4"
+      }
+    }
   }
 }
