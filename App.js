@@ -1,18 +1,17 @@
 // import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Animated, Image,ScrollView,SafeAreaView } from 'react-native';
+import { StyleSheet, View,ScrollView,SafeAreaView } from 'react-native';
 import { WebView } from 'react-native-webview';
-
-import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 // import 'react-native-gesture-handler';
 // import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 // import Constants from 'expo-constants';
 // import { Card } from 'react-native-paper';, useEffect 
 // import { Dimensions } from 'react-native';
-import React, { useRef} from 'react';
+// import React, { useRef} from 'react';
+import React from 'react';
 
 
-const Stack = createStackNavigator();
+// const Stack = createStackNavigator();
 // const win = Dimensions.get('window');
 // const ratio = win.width / 434;
 // const FadeInView = (props) => {
@@ -43,66 +42,66 @@ const Stack = createStackNavigator();
 // }
 
 
-function ScreenA({navigation}){ //pagina iniziale
-  // const screenb= () => {
-  //   navigation.navigate('Ristostore');
-  // }
-  // const screenc= () => {
-  //   navigation.navigate('Area Drivers');
-  // }
-  // const screend= () => {
-  //   navigation.navigate('Area Gestori');
-  // }
+// function ScreenA({navigation}){ //pagina iniziale
+//   // const screenb= () => {
+//   //   navigation.navigate('Ristostore');
+//   // }
+//   // const screenc= () => {
+//   //   navigation.navigate('Area Drivers');
+//   // }
+//   // const screend= () => {
+//   //   navigation.navigate('Area Gestori');
+//   // }
 
 
 
-  return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView>
+//   return (
+//     <SafeAreaView style={styles.container}>
+//       <ScrollView>
 
-        <View style={styles.container}> 
-          {/* <FadeInView  style={styles.div} ritardo={400}>
-            <TouchableWithoutFeedback onPress={screenb}>
-              <Image source={require('./assets/entra.jpg')}  
-              style={{
-                width: win.width,
-                height: 217 * ratio,
-              }}/>
-          </TouchableWithoutFeedback>
-          <Text style={styles.text}>Prova la nostra app</Text>
-          </FadeInView>
+//         <View style={styles.container}> 
+//           {/* <FadeInView  style={styles.div} ritardo={400}>
+//             <TouchableWithoutFeedback onPress={screenb}>
+//               <Image source={require('./assets/entra.jpg')}  
+//               style={{
+//                 width: win.width,
+//                 height: 217 * ratio,
+//               }}/>
+//           </TouchableWithoutFeedback>
+//           <Text style={styles.text}>Prova la nostra app</Text>
+//           </FadeInView>
         
-          <FadeInView style={styles.div}  ritardo={800}>
-            <TouchableWithoutFeedback onPress={screenc}>
-              <Image source={require('./assets/rider.jpg')}  
-              style={{
-                width: win.width,
-                height: 217 * ratio,
-              }}
-              />
-            </TouchableWithoutFeedback> 
-            <Text style={styles.text}>Area Driver</Text>
-          </FadeInView>
+//           <FadeInView style={styles.div}  ritardo={800}>
+//             <TouchableWithoutFeedback onPress={screenc}>
+//               <Image source={require('./assets/rider.jpg')}  
+//               style={{
+//                 width: win.width,
+//                 height: 217 * ratio,
+//               }}
+//               />
+//             </TouchableWithoutFeedback> 
+//             <Text style={styles.text}>Area Driver</Text>
+//           </FadeInView>
         
-          <FadeInView style={styles.div} ritardo={1200}>
-            <TouchableWithoutFeedback onPress={screend}>
-              <Image source={require('./assets/gestori.jpg')} 
-              style={{
-                width: win.width,
-                height: 217 * ratio,
-              }}
-              />
-            </TouchableWithoutFeedback> 
-          <Text style={styles.text}>Area Gestori</Text>
-          </FadeInView> */}
-          <WebView name='1' style={styles.div}
-            source={{ uri: 'https://ristostore.it/' }} 
-          />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
-}
+//           <FadeInView style={styles.div} ritardo={1200}>
+//             <TouchableWithoutFeedback onPress={screend}>
+//               <Image source={require('./assets/gestori.jpg')} 
+//               style={{
+//                 width: win.width,
+//                 height: 217 * ratio,
+//               }}
+//               />
+//             </TouchableWithoutFeedback> 
+//           <Text style={styles.text}>Area Gestori</Text>
+//           </FadeInView> */}
+//           {/* <WebView name='1' style={styles.div}
+//             source={{ uri: 'https://ristostore.it/' }} 
+//           /> */}
+//         </View>
+//       </ScrollView>
+//     </SafeAreaView>
+//   );
+// }
 // function ScreenB(){ //ristostore home
 //   return (
 //       <WebView name='1'
@@ -133,8 +132,8 @@ function ScreenA({navigation}){ //pagina iniziale
 export default function App() {
     return (
       <WebView name='1'
-            source={{ uri: 'https://ristostore.it/' }} 
-          />
+        source={{ uri: 'https://ristostore.it/' }} style={styles.mt}
+      />
       // <NavigationContainer>
       //   <Stack.Navigator>
       //     <Stack.Screen name="Ristostore App" component = {ScreenA}/>
@@ -154,9 +153,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   div:{
+    marginTop:20,
     flex:1,
     width:'100%',
     height:'100%'
+  },
+  mt:{
+    marginTop:35,
   },
   img:{
     resizeMode: 'contain',
