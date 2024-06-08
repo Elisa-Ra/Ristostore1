@@ -2,7 +2,7 @@
   "expo": {
     "name": "ristostore",
     "slug": "ristostore",
-    "version": "41.1.2",
+    "version": "41.1.3",
     "orientation": "portrait",
     "icon": "./assets/simbolo.png",
     "splash": {
@@ -19,7 +19,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "Ristostore",
-      "buildNumber": "41.1.2"
+      "buildNumber": "41.1.3"
     },
     "android": {
       "adaptiveIcon": {
@@ -27,7 +27,7 @@
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.app.ristostoreh",
-      "versionCode": 4112,
+      "versionCode": 4113,
       "permissions": []
     },
     "web": {
