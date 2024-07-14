@@ -284,7 +284,7 @@ function ScreenA({navigation}){ //pagina iniziale
                         value={secret_Value ?? ""}
 
                         secureTextEntry={passwordVisible}
-                        right={<TextInput.Icon name={passwordVisible ? "eye" : "eye-off"} onPress={() => setPasswordVisible(!passwordVisible)} />}
+                        // right={<TextInput.Icon name={passwordVisible ? "eye" : "eye-off"} onPress={() => setPasswordVisible(!passwordVisible)} />}
                       />
                       <TouchableOpacity
                         onPress={
@@ -325,6 +325,9 @@ function ScreenA({navigation}){ //pagina iniziale
                       </TouchableOpacity>
                       <Button onPress={()=>{Linking.openURL("https://ristostore.it/Registrati?versioneperapp=si");}}  mode="contained"  style={[styles.w100, styles.mt15]}>Oppure Registrati</Button>
                       <Button onPress={()=>{Linking.openURL("https://ristostore.it/Recupero_Password?versioneperapp=si");}}  mode="outlined"  style={[styles.w100, styles.mt15]}>Recupera password</Button>
+                      <Button onPress={()=>{
+                        setVisible(false);
+                      }}  mode="text"  style={[styles.w100, styles.mt15]}>Procedi come ospite</Button>
 
                   </Dialog.Content>
                 </Dialog>
